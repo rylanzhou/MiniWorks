@@ -128,7 +128,7 @@ const configs = [
     ],
   }, {
     h1: 'Amazing ~',
-    p: 'Probably this is the only \'music\' I could create by using these sound effects… 😓',
+    p: 'Probably this is the only \'music\' I could create by using these sound effects… 😓<br> But you never let me down ~',
     button: '👌',
   }, {
     h1: 'Rate time! 🤩',
@@ -136,7 +136,7 @@ const configs = [
     button: 'Bullshit.',
   }, {
     h1: 'Oh...alright, next one.',
-    p: 'Remember what I said last year, in that web page I sent you?',
+    p: 'Remember what I said last year, in that web page I sent you? <br><a href="#" onclick="playMusic()"><i class="fa fa-bullhorn"></i></a>',
     button: 'Nope. Just check.',
     playSequence: [
       {
@@ -185,8 +185,115 @@ const configs = [
     button: 'Alright. Alright.',
   }, {
     h1: 'Now try this ~',
-    p: 'But I\'m still trying...I will try...as long as I think I can.💪',
+    p: '<a href="#" onclick="playMusic()"><i class="fa fa-bullhorn"></i></a>',
     button: 'Check.',
+    playSequence: [
+      {
+        number: 4,
+        interval: 300,
+      }, {
+        number: 4,
+        interval: 300,
+      }, {
+        number: 3,
+        interval: 300,
+      }, {
+        number: 4,
+        interval: 300,
+      }, {
+        number: 4,
+        interval: 300,
+      }, {
+        number: 3,
+        interval: 600,
+      }, {
+        number: 4,
+        interval: 300,
+      }, {
+        number: 4,
+        interval: 300,
+      }, {
+        number: 3,
+        interval: 300,
+      }, {
+        number: 4,
+        interval: 300,
+      }, {
+        number: 4,
+        interval: 300,
+      }, {
+        number: 3,
+        interval: 600,
+      },
+    ],
+  }, {
+    h1: 'Look at them...',
+    p: 'There are some really 🐂🍺 people around me <br> and they have already got offers from Tencent, Baidu, Cisco... ',
+    button: 'Next',
+  }, {
+    h1: 'What about me?',
+    p: 'You might think I\'m also one of those 🐂🍺 people, <br> since I have helped you with some "technical" problems...',
+    button: 'Next',
+  }, {
+    h1: 'That\'s not the case...',
+    p: 'I admit that sometimes, I\'m a little bit timid, <br> which caused a huge loss of opportunities that I could have seized...',
+    button: 'Next',
+  }, {
+    h1: '......',
+    p: 'I was always kinda like "I don\'t know nothing about that" or <br> "I cannot help anything out" whenever others wanted me to join a project group.',
+    button: 'Next',
+  }, {
+    h1: 'What\'s more...',
+    p: 'Not only you, Lily, might think I\'m a master <br> in doing something like making "beautiful pages" or photoshopping or premiering...<br>But one thing you\'ve got to know is that...',
+    button: 'Next',
+  }, {
+    h1: '...is that...',
+    p: '整个院140多号人除了我以外没别人对这种东西感兴趣. You know what I mean?',
+    button: 'Next',
+  }, {
+    h1: 'Nobody...',
+    p: 'There are two parts that make up of a web page - Frontend & Backend. <br> Everybody likes backend, which mainly deals with difficult algorithms. <br> No one likes frontend except me, which mainly deals with visual effects and user interactions.',
+    button: 'Next',
+  }, {
+    h1: 'What\'s more...',
+    p: 'Frontend is literally something considered as an ill-paid, low-skilled job <br> that even a dummy could be able to make something out within 2 months\' learning.',
+    button: 'Next',
+  }, {
+    h1: 'So...',
+    p: 'The reason why they think I\'m great is that when there comes the time that they HAVE TO do some frontend job, they tend to fall into a conundrum with a lack of knowledge of frontend - well, at least, knowledge less than mine.',
+    button: 'Next',
+  }, {
+    h1: 'No matter what...',
+    p: 'No matter how "great" they think I am, the fact is that I wasn\'t accepted to any of those famous companies but there are others who were.',
+    button: 'Next',
+  }, {
+    h1: 'FATAL',
+    p: 'If I were not like that, maybe my college life would be a lot better?',
+    button: 'Well, who knows...',
+  }, {
+    h1: 'Who knows...',
+    p: 'Yeah, who knows...',
+    button: 'Next',
+  }, {
+    h1: 'Alright, enough...',
+    p: 'Enough of these word tricks I guess. <br> Today is your birthday and wtf am I talking about...',
+    button: 'Who knows...',
+  }, {
+    h1: 'I\'m going to give you something...',
+    p: '',
+    button: 'Well, finally...',
+  }, {
+    h1: 'BUT',
+    p: 'I want you to play these pads for me. If the sounds you create is satisfying to me, <br> I will get you to see the final thing I made for ya.',
+    button: 'Not again...',
+  }, {
+    h1: 'Give it a shot, will you?',
+    p: 'Please ~',
+    button: 'Enough.',
+  }, {
+    h1: 'Alright...Maybe this is more suitable ~',
+    p: 'Me first ~ And you follow ~',
+    button: 'Happy birthday to me 😑',
   },
 ];
 
@@ -281,18 +388,22 @@ window.addEventListener('load', () => {
       return;
     }
     currentSequence = configs[iter].playSequence ? configs[iter].playSequence : currentSequence;
-    if ([3, 5, 8, 10, 13].indexOf(iter) !== -1) {
+    if ([3, 5, 8, 10, 13, 17].indexOf(iter) !== -1) {
       const sequenceNumber = [];
       currentSequence.forEach((item) => {
         sequenceNumber.push(item.number);
       });
       if (sequenceNumber.toString() !== clickedSequence.toString()) {
+        button.style.animation = 'shake 1s';
+        button.addEventListener('animationend', () => {
+          button.style.animation = '';
+        });
         return;
       }
     }
     changeText();
     await timeout(500);
-    if ([0, 4, 7, 9, 12].indexOf(iter) !== -1) {
+    if ([0, 4, 7, 9, 12, 16].indexOf(iter) !== -1) {
       playMusic(configs[iter].playSequence);
     }
     iter += 1;
