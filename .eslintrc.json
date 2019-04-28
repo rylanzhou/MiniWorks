@@ -14,6 +14,7 @@
     "sourceType": "module"
   },
   "rules": {
+    "parser": "babel-eslint",
     "max-len": [1, 200]
   }
 }
