@@ -2,7 +2,7 @@ const configs = [
   {
     h1: 'Now Listen!',
     p: 'Where does the sound come from?',
-    button: 'Next',
+    button: 'I dunno.',
     playSequence: [
       {
         number: 3,
@@ -346,12 +346,12 @@ window.addEventListener('load', () => {
   const visual = document.querySelector('.visual');
   const button = document.querySelector('button');
   const color = [
-    '#60d394',
-    '#d36060',
+    '#55efc4',
+    '#ff7675',
     '#c060d3',
-    '#d3d160',
-    '#6860d3',
-    '#60b2d3',
+    '#fdcb6e',
+    '#6c5ce7',
+    '#0984e3',
   ];
 
   // Visual Effects
@@ -406,13 +406,17 @@ window.addEventListener('load', () => {
     if ([0, 4, 7, 9, 12, 16].indexOf(iter) !== -1) {
       playMusic(configs[iter].playSequence);
     }
+    if (iter === 2) {
+      const keyboard = document.querySelector('.piano-tiles');
+      keyboard.style.animation = 'keyboard-fly-in 1s ease forwards';
+    }
     iter += 1;
   });
 });
 
 window.addEventListener('resize', () => {
   const infoBoard = document.querySelector('.info-board');
-  if (Math.abs(window.innerHeight - 500) < 30 && Math.abs(window.innerWidth - 1000) < 50) {
+  if (Math.abs(window.innerHeight - 500) < 10 && Math.abs(window.innerWidth - 1000) < 20) {
     infoBoard.style.animation = 'fade-out 1s ease';
     infoBoard.addEventListener('animationend', () => {
       infoBoard.style.opacity = '0';
