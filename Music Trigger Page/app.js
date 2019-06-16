@@ -406,10 +406,6 @@ window.addEventListener('load', () => {
     if ([0, 4, 7, 9, 12, 16].indexOf(iter) !== -1) {
       playMusic(configs[iter].playSequence);
     }
-    if (iter === 2) {
-      const keyboard = document.querySelector('.piano-tiles');
-      keyboard.style.animation = 'keyboard-fly-in 1s ease forwards';
-    }
     iter += 1;
   });
 });

@@ -164,33 +164,6 @@ body {
   animation-delay: 3s;
 }
 
-.piano-tiles {
-  display: flex;
-  position: absolute;
-  bottom: -100px;
-  left: 0;
-  width: 100vw;
-  height: 100px;
-  border-top: 2px solid #ccc;
-}
-
-.piano-tiles .tiles {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  position: relative;
-  flex: 1;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-  background: white;
-  color: #ccc;
-}
-
-.piano-tiles .tiles:hover {
-  cursor: pointer;
-  box-shadow: 0 1px 2px 1px #222 inset;
-}
-
 .tiles .black {
   position: absolute;
   z-index: 2;
@@ -275,14 +248,5 @@ body {
   }
   100% {
     transform: translateX(0);
-  }
-}
-
-@keyframes keyboard-fly-in {
-  0% {
-    bottom: -100px;
-  }
-  100% {
-    bottom: 0;
   }
 }
