@@ -16,6 +16,7 @@
   "rules": {
     "max-len": [1, 200],
     "no-plusplus": "off",
-    "no-restricted-syntax": "off"
+    "no-restricted-syntax": "off",
+    "no-param-reassign": "off"
   }
 }
