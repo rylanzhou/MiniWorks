@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Dynamic CSS</title>
+  </head>
+  <body>
+    <div class="card" style="--x: 0; --y: 0;">
+      <h1>Testing this</h1>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione fugit
+        unde quibusdam, error eum id iusto voluptatum aperiam, cumque saepe at.
+        Earum quis nisi, eaque sequi tempora saepe quisquam enim?
+      </p>
+    </div>
+    <script>
+      document.querySelector('.card').onmousemove = e => {
+        // Make the center of the gradient follow the mouse position
+        const x = e.pageX - e.target.offsetLeft;
+        const y = e.pageY - e.target.offsetTop;
+        e.target.style.setProperty('--x', `${x}px`);
+        e.target.style.setProperty('--y', `${y}px`);
+      };
+    </script>
+  </body>
+</html>
