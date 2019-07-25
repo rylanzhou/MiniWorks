@@ -3,10 +3,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './Canvas Gravity Page/app.js',
+  entry: './Canvas Collision Page/app.js',
   output: {
     path: `${__dirname}/dist/`,
-    filename: './js/canvas-gravity.bundle.js',
+    filename: './js/canvas-collision.bundle.js',
   },
   module: {
     rules: [
@@ -33,7 +33,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       favicon: 'favicon.ico',
-      template: 'Canvas Gravity Page/index.html',
+      template: 'Canvas Collision Page/index.html',
     }),
   ],
   watch: true,
