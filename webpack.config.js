@@ -3,10 +3,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './Canvas Circular Motion Page/app.js',
+  entry: './Canvas Sine Waves Page/app.js',
   output: {
     path: `${__dirname}/dist/`,
-    filename: './js/canvas-circular-motion.bundle.js',
+    filename: './js/canvas-sine-waves.bundle.js',
   },
   module: {
     rules: [
@@ -33,7 +33,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       favicon: 'favicon.ico',
-      template: 'Canvas Circular Motion Page/index.html',
+      template: 'Canvas Sine Waves Page/index.html',
     }),
   ],
   watch: true,
