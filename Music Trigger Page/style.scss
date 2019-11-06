@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+.app {
+  height: 100vh;
+  width: 100vw;
+
+  .header {
+    position: absolute;
+    display: flex;
+    width: 200vw;
+
+    div {
+      flex: 1;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 50px 0 30px 0;
+      font-size: 40px;
+    }
+
+    p {
+      line-height: 30px;
+      font-size: 20px;
+    }
+  }
+
+  .visual div {
+    position: absolute;
+    z-index: -1;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    bottom: 0;
+    text-align: center;
+    font-size: 50px;
+  }
+
+  .operation {
+    position: absolute;
+    top: 300px;
+    width: 100%;
+    text-align: center;
+
+    .button {
+      width: 200px;
+      height: 50px;
+      border: 3px solid rgb(116, 196, 233);
+      border-radius: 12px;
+      font-size: 20px;
+      color: rgb(116, 196, 233);
+      outline: none;
+      background: none;
+      transition: all 0.2s;
+
+      &:hover {
+        cursor: pointer;
+        background-color: rgb(116, 196, 233);
+        color: white;
+      }
+    }
+  }
+
+  .pads {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    background: lightblue;
+
+    .pad {
+      flex: 1;
+      height: 100px;
+      width: 100px;
+      transition: all 0.2s;
+
+      &:hover {
+        cursor: pointer;
+        box-shadow: 2px 2px 10px 1px #222 inset;
+      }
+
+      &.pad-green {
+        background: #55efc4;
+      }
+      
+      &.pad-red {
+        background: #ff7675;
+      }
+      
+      &.pad-pink {
+        background: #c060d3;
+      }
+      
+      &.pad-yellow {
+        background: #fdcb6e;
+      }
+      
+      &.pad-purple {
+        background: #6c5ce7;
+      }
+      
+      &.pad-aqua {
+        background: #0984e3;
+      }
+    }
+  }
+}
+
+.info-board {
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  opacity: 1;
+
+  .dash-framework {
+    width: 1000px;
+    height: 500px;
+    box-sizing: border-box;
+    padding-top: 100px;
+    border: 10px dashed rgb(207, 240, 255);
+    border-radius: 20px;
+    line-height: 70px;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 700;
+    color: rgb(207, 240, 255);
+
+    .title1 {
+      margin-top: -100vw;
+      animation: fly-in 0.6s forwards;
+    }
+
+    .title2 {
+      margin-top: -100vw;
+      animation: fly-in 0.6s forwards;
+      animation-delay: 1s;
+    }
+
+    .title3 {
+      margin-top: -100vw;
+      animation: fly-in 0.6s forwards;
+      animation-delay: 2s;
+    }
+
+    i {
+      margin-top: -100vw;
+      animation: fly-in 0.6s forwards;
+      animation-delay: 3s;
+    }
+  }
+}
+
+img {
+  position: absolute;
+  top: 0;
+  right: -400px;
+  height: 100%;
+  opacity: 0.5;
+}
+
+.final-scene {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 50px 0;
+  background-color: rgb(45, 48, 55);
+
+  .text {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 680px;
+    font-family: 'Menlo';
+    font-weight: bold;
+    color: rgb(170, 177, 190);
+  }
+}
+
+@keyframes fly-in {
+  0% {
+    margin-top: -100vw;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+@keyframes fly-over {
+  0% {
+    right: -400px;
+  }
+  100% {
+    right: 1400px;
+  }
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0%;
+  }
+  50% {
+    bottom: 50%;
+  }
+  100% {
+    bottom: 0%;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes move-out {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100vw;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+    background-color: rgb(233, 116, 116);
+    border: rgb(233, 116, 116);
+    color: white;
+  }
+  50% {
+    transform: translateX(10px);
+    background-color: rgb(233, 116, 116);
+    border: rgb(233, 116, 116);
+  }
+  75% {
+    transform: translateX(-10px);
+    color: white;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

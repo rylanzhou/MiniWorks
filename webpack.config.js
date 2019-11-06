@@ -1,12 +1,11 @@
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  mode: 'development',
-  entry: './Block Breaker Page/app.js',
+  entry: './Music Trigger Page/app.js',
   output: {
     path: `${__dirname}/dist/`,
-    filename: './js/block-breaker.bundle.js',
+    filename: './js/music-trigger.bundle.js',
   },
   module: {
     rules: [
@@ -20,22 +19,38 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader',
+            options: { minimize: true },
+          },
+        ],
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|svg|jpg|gif|mp3)$/,
+        use: ['file-loader'],
+      },
     ],
   },
   plugins: [
-    new BrowserSyncPlugin({
-      host: 'localhost',
-      port: 3000,
-      server: { baseDir: ['dist'] },
-      files: ['./dist/*'],
-      notify: false,
-    }),
     new HtmlWebpackPlugin({
-      filename: 'index.html',
-      favicon: 'favicon.ico',
-      template: 'Block Breaker Page/index.html',
+      filename: './index.html',
+      template: './Music Trigger Page/index.html',
+    }),
+    new MiniCssExtractPlugin({
+      filename: './Music Trigger Page/style.css',
+      chunkFilename: './Music Trigger Page/style.css',
     }),
   ],
   watch: true,
-  devtool: 'source-map',
 };

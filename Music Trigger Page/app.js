@@ -7,27 +7,34 @@ const configs = [
       {
         number: 3,
         interval: 500,
-      }, {
+      },
+      {
         number: 4,
         interval: 500,
-      }, {
+      },
+      {
         number: 5,
         interval: 500,
       },
     ],
-  }, {
+  },
+  {
     h1: 'Your turn!',
     p: 'What did the sound sound like? <br><a href="#" onclick="playMusic()"><i class="fa fa-bullhorn"></i></a>',
     button: 'Skip',
-  }, {
+  },
+  {
     h1: 'Wanna skip?',
-    p: 'No way😑! I have O.C.D and that means you have to match the sound PERFECTLY!<br>Each time you think you have replayed the sound, click the button to see whether it is correct.<br>If you got the same text, you got the idea~<br><a href="#" onclick="playMusic()"><i class="fa fa-bullhorn"></i></a>',
+    p:
+      'No way😑! I have O.C.D and that means you have to match the sound PERFECTLY!<br>Each time you think you have replayed the sound, click the button to see whether it is correct.<br>If you got the same text, you got the idea~<br><a href="#" onclick="playMusic()"><i class="fa fa-bullhorn"></i></a>',
     button: 'Fine. Check it.',
-  }, {
+  },
+  {
     h1: 'Perfect! I know you could make it.😉',
     p: 'Keep going to see if you could go through your gift!🎁',
     button: 'Okay~',
-  }, {
+  },
+  {
     h1: 'Now try this out.',
     p: '🎵🎶🎵🎶🎵🎶<br><a href="#" onclick="playMusic()"><i class="fa fa-bullhorn"></i></a>',
     button: 'Check it.',
@@ -35,32 +42,40 @@ const configs = [
       {
         number: 4,
         interval: 500,
-      }, {
+      },
+      {
         number: 4,
         interval: 500,
-      }, {
+      },
+      {
         number: 4,
         interval: 500,
-      }, {
+      },
+      {
         number: 4,
         interval: 500,
-      }, {
+      },
+      {
         number: 4,
         interval: 500,
-      }, {
+      },
+      {
         number: 4,
         interval: 500,
       },
     ],
-  }, {
-    h1: 'Quite easy, isn\'t it? 😎',
-    p: 'Keep going ~ I\'ve still got something to say ~',
+  },
+  {
+    h1: "Quite easy, isn't it? 😎",
+    p: 'Keep going ~',
     button: 'Next',
-  }, {
+  },
+  {
     h1: 'There are a few more levels to go ~',
     p: '',
     button: 'Next',
-  }, {
+  },
+  {
     h1: 'Now check this out.',
     p: '<a href="#" onclick="playMusic()"><i class="fa fa-bullhorn"></i></a>',
     button: 'Check ~',
@@ -68,25 +83,31 @@ const configs = [
       {
         number: 1,
         interval: 500,
-      }, {
+      },
+      {
         number: 1,
         interval: 500,
-      }, {
+      },
+      {
         number: 2,
         interval: 500,
-      }, {
+      },
+      {
         number: 3,
         interval: 500,
-      }, {
+      },
+      {
         number: 1,
         interval: 500,
       },
     ],
-  }, {
+  },
+  {
     h1: 'Great Job ~ ',
     p: 'Becoming harder now.',
     button: 'Next ✌️',
-  }, {
+  },
+  {
     h1: 'Here you are!',
     p: 'Jingle Bells 🔔, Jingle Bells 🎄, Jingle all the way ~<br><a href="#" onclick="playMusic()"><i class="fa fa-bullhorn"></i></a>',
     button: 'Check ~',
@@ -94,96 +115,122 @@ const configs = [
       {
         number: 4,
         interval: 500,
-      }, {
+      },
+      {
         number: 4,
         interval: 500,
-      }, {
+      },
+      {
         number: 3,
         interval: 1000,
-      }, {
+      },
+      {
         number: 4,
         interval: 500,
-      }, {
+      },
+      {
         number: 4,
         interval: 500,
-      }, {
+      },
+      {
         number: 3,
         interval: 1000,
-      }, {
+      },
+      {
         number: 4,
         interval: 500,
-      }, {
+      },
+      {
         number: 5,
         interval: 500,
-      }, {
+      },
+      {
         number: 0,
         interval: 500,
-      }, {
+      },
+      {
         number: 1,
         interval: 500,
-      }, {
+      },
+      {
         number: 4,
         interval: 500,
       },
     ],
-  }, {
+  },
+  {
     h1: 'Amazing ~',
-    p: 'Probably this is the only \'music\' I could create by using these sound effects… 😓<br> But you never let me down ~',
-    button: '👌',
-  }, {
-    h1: 'Rate time! 🤩',
-    p: 'If you enjoy this <span style="text-decoration: line-through;">app</span> page, please give me five stars ~ ⭐️',
+    p: "Probably this is the only 'music' I could create by using these sound effects… 😓",
+    button: 'Next',
+  },
+  {
+    h1: 'Rate time! 🤩 Give me five stars ~ ⭐️',
+    p: 'Maybe this is what all those developers will do?',
     button: 'Bullshit.',
-  }, {
-    h1: 'Oh...alright, next one.',
-    p: 'Remember what I said last year, in that web page I sent you? <br><a href="#" onclick="playMusic()"><i class="fa fa-bullhorn"></i></a>',
-    button: 'Nope. Just check.',
+  },
+  {
+    h1: '记得去年我说的啥吗',
+    p: '最好别记得 <br><a href="#" onclick="playMusic()"><i class="fa fa-bullhorn"></i></a>',
+    button: 'Next',
     playSequence: [
       {
         number: 4,
         interval: 600,
-      }, {
+      },
+      {
         number: 3,
         interval: 300,
-      }, {
+      },
+      {
         number: 4,
         interval: 300,
-      }, {
+      },
+      {
         number: 4,
         interval: 300,
-      }, {
+      },
+      {
         number: 3,
         interval: 600,
-      }, {
+      },
+      {
         number: 1,
         interval: 600,
-      }, {
+      },
+      {
         number: 3,
         interval: 300,
-      }, {
+      },
+      {
         number: 1,
         interval: 300,
-      }, {
+      },
+      {
         number: 1,
         interval: 300,
-      }, {
+      },
+      {
         number: 3,
         interval: 600,
       },
     ],
-  }, {
-    h1: 'Euphonious!',
-    p: 'I said I will definitely give you a better gift next time.',
+  },
+  {
+    h1: '今年肯定会比去年做的好啦!',
+    p: '至少能点个两下',
     button: 'Next',
-  }, {
+  },
+  {
     h1: 'What do you think?',
-    p: 'That\'s this time ~ What do you think? 😊',
-    button: 'Still shit. 😑',
-  }, {
-    h1: 'Right...I think so too...',
-    p: 'I\'m still far behind "skillful"...😔<br>Sorry for making you disappointed.',
+    p: '这也不像是 生日礼物 啊是吧 😓',
+    button: 'Next',
+  },
+  {
+    h1: '就是个……小游戏？',
+    p: '情商低啊情商低',
     button: 'Alright. Alright.',
-  }, {
+  },
+  {
     h1: 'Now try this ~',
     p: '<a href="#" onclick="playMusic()"><i class="fa fa-bullhorn"></i></a>',
     button: 'Check.',
@@ -191,109 +238,147 @@ const configs = [
       {
         number: 4,
         interval: 300,
-      }, {
+      },
+      {
         number: 4,
         interval: 300,
-      }, {
+      },
+      {
         number: 3,
         interval: 300,
-      }, {
+      },
+      {
         number: 4,
         interval: 300,
-      }, {
+      },
+      {
         number: 4,
         interval: 300,
-      }, {
+      },
+      {
         number: 3,
         interval: 600,
-      }, {
+      },
+      {
         number: 4,
         interval: 300,
-      }, {
+      },
+      {
         number: 4,
         interval: 300,
-      }, {
+      },
+      {
         number: 3,
         interval: 300,
-      }, {
+      },
+      {
         number: 4,
         interval: 300,
-      }, {
+      },
+      {
         number: 4,
         interval: 300,
-      }, {
+      },
+      {
         number: 3,
         interval: 600,
       },
     ],
-  }, {
-    h1: 'Look at them...',
-    p: 'There are some really 🐂🍺 people around me <br> and they have already got offers from Tencent, Baidu, Cisco... ',
+  },
+  {
+    h1: '不仅是小游戏……',
+    p: '怎么算结束啊？无限闯关咩？',
     button: 'Next',
-  }, {
-    h1: 'What about me?',
-    p: 'You might think I\'m also one of those 🐂🍺 people, <br> since I have helped you with some "technical" problems...',
+  },
+  {
+    h1: '甚至不知道文字该放啥',
+    p: 'Best Wishes?',
     button: 'Next',
-  }, {
-    h1: 'That\'s not the case...',
-    p: 'I admit that sometimes, I\'m a little bit timid, <br> which caused a huge loss of opportunities that I could have seized...',
+  },
+  {
+    h1: '这太尴尬了',
+    p: '要不我表演个节目？',
     button: 'Next',
-  }, {
-    h1: '......',
-    p: 'I was always kinda like "I don\'t know nothing about that" or <br> "I cannot help anything out" whenever others wanted me to join a project group.',
+  },
+  {
+    h1: '弹钢琴 🎹???',
+    p: '谱呢谱呢……',
     button: 'Next',
-  }, {
-    h1: 'What\'s more...',
-    p: 'Not only you, Lily, might think I\'m a master <br> in doing something like making "beautiful pages" or photoshopping or premiering...<br>But one thing you\'ve got to know is that...',
+  },
+  {
+    h1: '但是好忙啊……一直都没时间弹',
+    p: 'Keyboard买来半年多了就只会弹一首',
     button: 'Next',
-  }, {
-    h1: '...is that...',
-    p: '整个院140多号人除了我以外没别人对这种东西感兴趣. You know what I mean?',
+  },
+  {
+    h1: '实在是抱歉……',
+    p: '抱歉抱歉抱歉 (._.) ',
     button: 'Next',
-  }, {
-    h1: 'Nobody...',
-    p: 'There are two parts that make up of a web page - Frontend & Backend. <br> Everybody likes backend, which mainly deals with difficult algorithms. <br> No one likes frontend except me, which mainly deals with visual effects and user interactions.',
+  },
+  {
+    h1: '然后大概……这玩意……烂尾了',
+    p: '啊啊啊强迫症真的受不了啊……',
     button: 'Next',
-  }, {
-    h1: 'What\'s more...',
-    p: 'Frontend is literally something considered as an ill-paid, low-skilled job <br> that even a dummy could be able to make something out within 2 months\' learning.',
+  },
+  {
+    h1: '我真的还想做很多东西',
+    p: '比如说用代码写一个动画之类的或者把这个按键换成琴键……',
     button: 'Next',
-  }, {
-    h1: 'So...',
-    p: 'The reason why they think I\'m great is that when there comes the time that they HAVE TO do some frontend job, they tend to fall into a conundrum with a lack of knowledge of frontend - well, at least, knowledge less than mine.',
+  },
+  {
+    h1: '如果可以的话你等我忙完',
+    p: 'GRE考完？申请的事情弄完？大创水完？毕设做完？',
+    button: 'What？',
+  },
+  {
+    h1: '或许就……忙不完了呢',
+    p: '😟',
     button: 'Next',
-  }, {
-    h1: 'No matter what...',
-    p: 'No matter how "great" they think I am, the fact is that I wasn\'t accepted to any of those famous companies but there are others who were.',
-    button: 'Next',
-  }, {
-    h1: 'FATAL',
-    p: 'If I were not like that, maybe my college life would be a lot better?',
+  },
+  {
+    h1: '你是不是也经常发现',
+    p: '经常对自己说 “熬过这一阵就好了”',
     button: 'Well, who knows...',
-  }, {
-    h1: 'Who knows...',
-    p: 'Yeah, who knows...',
+  },
+  {
+    h1: '但事实上呢',
+    p: '似乎永远都有事情等着去熬诶……',
     button: 'Next',
-  }, {
-    h1: 'Alright, enough...',
-    p: 'Enough of these word tricks I guess. <br> Today is your birthday and wtf am I talking about...',
-    button: 'Who knows...',
-  }, {
-    h1: 'I\'m going to give you something...',
-    p: '',
-    button: 'Well, finally...',
-  }, {
-    h1: 'BUT',
-    p: 'I want you to play these pads for me. If the sounds you create is satisfying to me, <br> I will get you to see the final thing I made for ya.',
+  },
+  {
+    h1: '所以……都要加油蛙 🐸',
+    p: '这“礼物”到了后面好水啊',
+    button: 'I think so',
+  },
+  {
+    h1: '现在好像就变成了手动弹幕……',
+    p: '去年还是自动的呢……',
+    button: '……',
+  },
+  {
+    h1: '啊怎么办怎么办后面啥都没了',
+    p: '再让她闯一关吧？',
     button: 'Not again...',
-  }, {
-    h1: 'Give it a shot, will you?',
-    p: 'Please ~',
-    button: 'Enough.',
-  }, {
-    h1: 'Alright...Maybe this is more suitable ~',
-    p: 'Me first ~ And you follow ~',
-    button: 'Happy birthday to me 😑',
+  },
+  {
+    h1: '原谅我🙏时间只允许我做到这了',
+    p: 'Please……',
+    button: 'Next',
+  },
+  {
+    h1: '不过有快600行代码了呢',
+    p: 'Partly represents my sincerity...',
+    button: 'Next',
+  },
+  {
+    h1: '最后……来个结尾吧？',
+    p: '之前就是防止做不完……结果现在只能充数了',
+    button: 'Happy birthday to me',
+  },
+  {
+    h1: '嗯……这个结尾不是乱码……',
+    p: 'You have to wait until it stops...',
+    button: '...',
   },
 ];
 
@@ -345,14 +430,7 @@ window.addEventListener('load', () => {
   const pads = document.querySelectorAll('.pad');
   const visual = document.querySelector('.visual');
   const button = document.querySelector('button');
-  const color = [
-    '#55efc4',
-    '#ff7675',
-    '#c060d3',
-    '#fdcb6e',
-    '#6c5ce7',
-    '#0984e3',
-  ];
+  const color = ['#55efc4', '#ff7675', '#c060d3', '#fdcb6e', '#6c5ce7', '#0984e3'];
 
   // Visual Effects
   const createBubbles = (index) => {
@@ -378,13 +456,25 @@ window.addEventListener('load', () => {
       if (clickedSequence.length > currentSequence.length) {
         clickedSequence.splice(0, clickedSequence.length - currentSequence.length);
       }
-      console.log(clickedSequence);
     });
   });
 
   // When button is clicked, play a series of music.
   button.addEventListener('click', async () => {
-    if (iter >= configs.length) {
+    if (iter === configs.length) {
+      const finalScene = document.querySelector('.final-scene');
+      const finalSceneText = document.querySelector('.final-scene .text');
+      const text = finalSceneText.textContent;
+      finalSceneText.textContent = '';
+      finalScene.style.visibility = 'visible';
+      finalScene.style.animation = 'fade-in 2s forwards';
+      await timeout(1000);
+      for (let i = 0; i < text.length; i++) {
+        finalSceneText.textContent += text[i];
+        // eslint-disable-next-line no-await-in-loop
+        await timeout(30);
+      }
+      alert('Thanks for watching ~ Forever 18 ～');
       return;
     }
     currentSequence = configs[iter].playSequence ? configs[iter].playSequence : currentSequence;
@@ -426,3 +516,5 @@ window.addEventListener('resize', () => {
     });
   }
 });
+
+window.onload = async () => {};
