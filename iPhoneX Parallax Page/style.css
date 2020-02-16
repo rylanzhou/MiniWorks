@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css?family=Nobile:400,700&display=swap");
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Nobile';
+  background-color: #191919;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  padding: 2em;
+}
+
+.container:first-child {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 10%;
+      grid-template-rows: 10%;
+}
+
+.container.secondary {
+  margin-top: -3em;
+}
+
+.container.secondary h2 {
+  margin: 0;
+  color: white;
+  font-size: 3em;
+  font-weight: normal;
+}
+
+.container.secondary p {
+  line-height: 1.5em;
+  color: #c2c2c2;
+}
+
+.container.secondary p.subtext {
+  margin-top: 0;
+  font-size: 1.4em;
+  text-transform: uppercase;
+}
+
+.container header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container header .logo {
+  color: black;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-decoration: none;
+}
+
+.container h1 {
+  margin-top: 2em;
+  text-align: center;
+  font-size: 3em;
+  font-weight: normal;
+  line-height: .9em;
+}
+
+.container .line {
+  position: relative;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  width: 50%;
+  height: 50%;
+  margin-bottom: 4em;
+  border-right: 1px solid white;
+}
+
+.container .line::after {
+  content: '';
+  position: absolute;
+  right: -.7em;
+  bottom: -2px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 11px 11px 0 11px;
+  border-color: white transparent transparent transparent;
+}
+
+.mountains, .forest {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+}
+
+.mountains {
+  top: 0;
+}
+
+.forest {
+  top: 18%;
+}
+
+@media only screen and (min-width: 665px) {
+  .mountains {
+    top: -25%;
+  }
+  .trees {
+    top: -40%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

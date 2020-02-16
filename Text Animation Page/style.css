@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background: #000;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.container span {
+  display: block;
+  text-transform: uppercase;
+}
+
+.text1 {
+  position: relative;
+  margin-bottom: 20px;
+  letter-spacing: 8px;
+  font-size: 60px;
+  font-weight: 700;
+  color: white;
+  background: black;
+
+  animation: text1 2s 1;
+}
+
+.text2 {
+  font-size: 30px;
+  color: #6ab04c;
+}
+
+.text3 {
+  margin-top: 20px;
+  font-size: 60px;
+  color: white;
+
+  animation: apple 4s 1;
+}
+
+@keyframes text1 {
+  0% {
+    margin-bottom: -40px;
+    color: black;
+  }
+  30% {
+    margin-bottom: -40px;
+    letter-spacing: 25px;
+  }
+  85% {
+    margin-bottom: -40px;
+    letter-spacing: 8px;
+  }
+}
+
+@keyframes apple {
+  0% {
+    margin-top: -60px;
+    opacity: 0;
+  }
+  50% {
+    margin-top: -60px;
+    opacity: 0;    
+  }
+  60% {
+    margin-top: 20px;
+    opacity: 1;
+  }
+}
