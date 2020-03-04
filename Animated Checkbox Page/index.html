@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated SVG Checkbox</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="inner">
+      <input type="checkbox" name="cb" id="cb" />
+      <label for="cb" id="checkbox">
+        <svg viewBox="0 0 100 100">
+          <path
+            class="box"
+            d="M83.27,91H16.73C12.46,91,9,87.54,9,83.27V16.73C9,12.46,12.46,9,16.73,9h66.55C87.54,9,91,12.46,91,16.73
+	v66.55C91,87.54,87.54,91,83.27,91z"
+          />
+          <polyline class="check" points="18.5,49.5 41.5,72.5 81,33" />
+        </svg>
+        <span>Toggle On</span>
+      </label>
+    </div>
+
+    <script>
+      let checkbox = document.getElementById('cb')
+      let svg = document.getElementById('checkbox')
+
+      svg.addEventListener('click', () => {
+        if (checkbox.checked) {
+          svg.classList.add('reverse')
+        } else {
+          svg.classList.remove('reverse')
+        }
+      })
+    </script>
+  </body>
+</html>
