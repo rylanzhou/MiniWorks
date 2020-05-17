@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: #e84118;
+  background: #eee;
 }
 
 .search-box {
@@ -26,12 +26,13 @@ body {
   text-decoration: none;
   color: #e84118;
   background: #2f3640;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .search-text {
   float: left;
   width: 0px;
+  max-width: 60%;
   padding: 0;
   line-height: 40px;
   border: none;
@@ -39,7 +40,7 @@ body {
   outline: none;
   font-size: 16px;
   color: white;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .search-box:hover > .search-text {

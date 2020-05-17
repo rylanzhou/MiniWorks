@@ -2,16 +2,23 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'montserrat', sans-serif;
+}
+
+html {
+  height: 100vh;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 8vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
   padding: 0 20px;
   background-color: #3498db;
-  font-family: "montserrat", sans-serif;
 }
 
 .logo {
@@ -98,4 +105,27 @@ nav {
     opacity: 1;
     transform: translate(0px);
   }
+}
+
+.show-list {
+  position: relative;
+}
+
+.show-list .move-list {
+  position: absolute;
+  top: 50px;
+  width: 300px;
+  list-style: none;
+  color: white;
+  background-color: #3498db;
+}
+
+.show-list .move-list::after {
+  position: absolute;
+  top: -30px;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  border-bottom-color: #3498db;
 }
