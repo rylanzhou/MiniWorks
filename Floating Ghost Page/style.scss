@@ -1,0 +1,117 @@
+$PRIMARY: #2c3a47;
+$SECONDARY: #f2f2f2;
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: $PRIMARY;
+}
+
+.ghost {
+  position: relative;
+  width: 140px;
+  height: 160px;
+  border-radius: 70px 70px 0 0;
+  background: $SECONDARY;
+  cursor: pointer;
+  animation: floating 2s infinite ease-in-out;
+
+  .face {
+    position: absolute;
+    top: 60px;
+    left: calc(50% - 50px);
+    width: 100px;
+
+    .eyes {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 24px;
+      margin-bottom: 14px;
+
+      span {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background-color: $PRIMARY;
+        transition: 0.3s linear;
+      }
+    }
+
+    .mouth {
+      width: 40px;
+      height: 20px;
+      margin: auto;
+      border-radius: 0 0 20px 20px;
+      background-color: $PRIMARY;
+      transition: 0.3s linear;
+    }
+  }
+
+  .hands {
+    position: absolute;
+    left: -20px;
+    top: 80px;
+    display: flex;
+    justify-content: space-between;
+    width: 180px;
+
+    span {
+      width: 20px;
+      height: 30px;
+      background-color: $SECONDARY;
+
+      &:first-child {
+        border-radius: 20px 0 0 20px;
+      }
+
+      &:last-child {
+        border-radius: 0 20px 20px 0;
+      }
+    }
+  }
+
+  .feet {
+    position: absolute;
+    bottom: -20px;
+    display: flex;
+    width: 100%;
+
+    span {
+      flex: 1;
+      height: 20px;
+      border-radius: 0 0 20px 20px;
+      background-color: $SECONDARY;
+
+      &:first-child {
+        border-radius: 0 0 20px 12px;
+      }
+
+      &:last-child {
+        border-radius: 0 0 12px 20px;
+      }
+    }
+  }
+
+  &:hover {
+    .eyes {
+      span {
+        height: 16px;
+      }
+    }
+
+    .mouth {
+      height: 12px;
+    }
+  }
+}
+
+@keyframes floating {
+  50% {
+    transform: translateY(-30px);
+  }
+}
