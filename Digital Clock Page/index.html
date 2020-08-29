@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Clock Page</title>
+  </head>
+  <body>
+    <div class="clock">
+      <div class="hour">
+        <div class="hr" id="hr"></div>
+      </div>
+      <div class="min">
+        <div class="mn" id="mn"></div>
+      </div>
+      <div class="sec">
+        <div class="sc" id="sc"></div>
+      </div>
+    </div>
+
+    <script>
+      const head = document.querySelector('head')
+      const link = document.createElement('link')
+      link.href = new Date().getHours() > 19 ? 'night.css' : 'day.css'
+      link.type = 'text/css'
+      link.rel = 'stylesheet'
+      head.appendChild(link)
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
