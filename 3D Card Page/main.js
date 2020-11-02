@@ -27,7 +27,7 @@ container.addEventListener('mouseenter', (e) => {
 
 // Animate Out
 container.addEventListener('mouseleave', (e) => {
-  card.style.transition = `all 0.5 ease`
+  card.style.transition = `all 0.5s ease`
   card.style.transform = `rotateX(0deg) rotateY(0deg)`
 
   // Pop back
