@@ -37,3 +37,16 @@ container.addEventListener('mouseleave', (e) => {
   sizes.style.transform = 'translateZ(0px)'
   purchase.style.transform = 'translateZ(0px)'
 })
+
+// Select Size
+const sizeButtons = Array.from(sizes.querySelectorAll('button'))
+
+sizeButtons.forEach((button) => {
+  button.onclick = () => {
+    const activeElement = sizeButtons.find((each) =>
+      each.classList.contains('active')
+    )
+    activeElement.classList.remove('active')
+    button.classList.add('active')
+  }
+})
