@@ -35,7 +35,8 @@ body {
 }
 
 .container .card {
-  min-height: 80vh;
+  height: 80vh;
+  min-height: 50rem;
   width: 35rem;
   padding: 0 5rem;
   border-radius: 30px;
