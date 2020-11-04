@@ -6,8 +6,6 @@
 }
 
 body {
-  font-family: sans-serif;
-  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,6 +15,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  min-height: 100vh;
+  font-family: sans-serif;
   -webkit-perspective: 1000px;
           perspective: 1000px;
 }
@@ -58,7 +58,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 35vh;
+  min-height: 20rem;
 }
 
 .container .card .sneaker .circle {
@@ -99,6 +99,8 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-transition: all 0.75s ease-out;
+  transition: all 0.75s ease-out;
 }
 
 .container .card .info .sizes button {
@@ -132,6 +134,7 @@ body {
   border-radius: 30px;
   color: white;
   font-weight: bolder;
+  font-size: 24px;
   background: #f54642;
   cursor: pointer;
 }
