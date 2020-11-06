@@ -13,6 +13,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  perspective: 1000px;
   font-family: 'PingFang SC', sans-serif;
 }
 
@@ -29,6 +30,7 @@ body {
     padding: 0 5rem;
     border-radius: 30px;
     transition: $transition;
+    transform-style: preserve-3d;
     box-shadow: 0 20px 20px $shadow, 0 0 50px $shadow;
 
     .sneaker {
@@ -101,7 +103,7 @@ body {
           color: white;
           font-weight: bolder;
           font-size: 1.5rem;
-          background-color: coral;
+          background-color: #f54642;
           cursor: pointer;
         }
       }

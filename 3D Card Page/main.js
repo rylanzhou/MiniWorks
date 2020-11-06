@@ -1,10 +1,10 @@
-const qs = document.querySelector
-const qsa = document.querySelectorAll
+const qs = (selector) => document.querySelector(selector)
+const qsa = (selector) => document.querySelectorAll(selector)
 
 const container = qs('.container')
 const card = qs('.card')
 const title = qs('.title')
-const sneaker = qs('.sneaker')
+const sneaker = qs('.sneaker img')
 const purchase = qs('.purchase')
 const description = qs('.info h3')
 const sizes = qs('.sizes')

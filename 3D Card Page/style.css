@@ -16,9 +16,9 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   min-height: 100vh;
-  font-family: sans-serif;
   -webkit-perspective: 1000px;
           perspective: 1000px;
+  font-family: 'PingFang SC', sans-serif;
 }
 
 .container {
@@ -40,10 +40,10 @@ body {
   width: 35rem;
   padding: 0 5rem;
   border-radius: 30px;
+  -webkit-transition: all 0.75s ease;
+  transition: all 0.75s ease;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  -webkit-transition: all 0.5 ease;
-  transition: all 0.5 ease;
   -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0 0 50px rgba(0, 0, 0, 0.2);
           box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0 0 50px rgba(0, 0, 0, 0.2);
 }
@@ -52,12 +52,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-height: 20rem;
 }
 
@@ -66,21 +66,21 @@ body {
   width: 15rem;
   height: 15rem;
   border-radius: 50%;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(245, 70, 66, 0.75)), to(rgba(8, 83, 156, 0.75)));
-  background: linear-gradient(to right, rgba(245, 70, 66, 0.75), rgba(8, 83, 156, 0.75));
+  background: -webkit-gradient(linear, left top, right top, from(coral), to(steelblue));
+  background: linear-gradient(to right, coral, steelblue);
 }
 
 .container .card .sneaker img {
   z-index: 2;
   width: 20rem;
-  -webkit-transition: all 0.75s ease-out;
-  transition: all 0.75s ease-out;
+  -webkit-transition: all 0.75s ease;
+  transition: all 0.75s ease;
 }
 
 .container .card .info h1 {
   font-size: 3rem;
-  -webkit-transition: all 0.75s ease-out;
-  transition: all 0.75s ease-out;
+  -webkit-transition: all 0.75s ease;
+  transition: all 0.75s ease;
 }
 
 .container .card .info h3 {
@@ -88,8 +88,8 @@ body {
   font-size: 1.3rem;
   color: #585858;
   font-weight: lighter;
-  -webkit-transition: all 0.75s ease-out;
-  transition: all 0.75s ease-out;
+  -webkit-transition: all 0.75s ease;
+  transition: all 0.75s ease;
 }
 
 .container .card .info .sizes {
@@ -99,8 +99,8 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-transition: all 0.75s ease-out;
-  transition: all 0.75s ease-out;
+  -webkit-transition: all 0.75s ease;
+  transition: all 0.75s ease;
 }
 
 .container .card .info .sizes button {
@@ -123,8 +123,8 @@ body {
 
 .container .card .info .purchase {
   margin-top: 5rem;
-  -webkit-transition: all 0.75s ease-out;
-  transition: all 0.75s ease-out;
+  -webkit-transition: all 0.75s ease;
+  transition: all 0.75s ease;
 }
 
 .container .card .info .purchase button {
@@ -134,8 +134,8 @@ body {
   border-radius: 30px;
   color: white;
   font-weight: bolder;
-  font-size: 24px;
-  background: #f54642;
+  font-size: 1.5rem;
+  background-color: #f54642;
   cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
