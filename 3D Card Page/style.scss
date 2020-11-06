@@ -1,3 +1,7 @@
+$shadow: rgba(0, 0, 0, 0.2);
+$gray: #585858;
+$transition: all 0.75s ease;
+
 * {
   margin: 0;
   padding: 0;
@@ -9,8 +13,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  font-family: sans-serif;
-  perspective: 1000px;
+  font-family: 'PingFang SC', sans-serif;
 }
 
 .container {
@@ -25,14 +28,13 @@ body {
     width: 35rem;
     padding: 0 5rem;
     border-radius: 30px;
-    transform-style: preserve-3d;
-    transition: all 0.5 ease;
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0 0 50px rgba(0, 0, 0, 0.2);
+    transition: $transition;
+    box-shadow: 0 20px 20px $shadow, 0 0 50px $shadow;
 
     .sneaker {
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       min-height: 20rem;
 
       .circle {
@@ -40,38 +42,34 @@ body {
         width: 15rem;
         height: 15rem;
         border-radius: 50%;
-        background: linear-gradient(
-          to right,
-          rgba(245, 70, 66, 0.75),
-          rgba(8, 83, 156, 0.75)
-        );
+        background: linear-gradient(to right, coral, steelblue);
       }
 
       img {
         z-index: 2;
         width: 20rem;
-        transition: all 0.75s ease-out;
+        transition: $transition;
       }
     }
 
     .info {
       h1 {
         font-size: 3rem;
-        transition: all 0.75s ease-out;
+        transition: $transition;
       }
 
       h3 {
         padding: 2rem 0;
         font-size: 1.3rem;
-        color: #585858;
+        color: $gray;
         font-weight: lighter;
-        transition: all 0.75s ease-out;
+        transition: $transition;
       }
 
       .sizes {
         display: flex;
         justify-content: space-between;
-        transition: all 0.75s ease-out;
+        transition: $transition;
 
         button {
           padding: 0.5rem 2rem;
@@ -80,20 +78,20 @@ body {
           outline: none;
           border-radius: 30px;
           font-weight: bold;
-          color: #585858;
-          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          color: $gray;
+          box-shadow: 0 5px 10px $shadow;
           cursor: pointer;
 
           &.active {
             color: white;
-            background-color: #585858;
+            background-color: $gray;
           }
         }
       }
 
       .purchase {
         margin-top: 5rem;
-        transition: all 0.75s ease-out;
+        transition: $transition;
 
         button {
           width: 100%;
@@ -102,8 +100,8 @@ body {
           border-radius: 30px;
           color: white;
           font-weight: bolder;
-          font-size: 24px;
-          background: #f54642;
+          font-size: 1.5rem;
+          background-color: coral;
           cursor: pointer;
         }
       }

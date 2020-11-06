@@ -1,10 +1,24 @@
-const container = document.querySelector('.container')
-const card = document.querySelector('.card')
-const title = document.querySelector('.title')
-const sneaker = document.querySelector('.sneaker img')
-const purchase = document.querySelector('.purchase')
-const description = document.querySelector('.info h3')
-const sizes = document.querySelector('.sizes')
+const qs = document.querySelector
+const qsa = document.querySelectorAll
+
+const container = qs('.container')
+const card = qs('.card')
+const title = qs('.title')
+const sneaker = qs('.sneaker')
+const purchase = qs('.purchase')
+const description = qs('.info h3')
+const sizes = qs('.sizes')
+const sizeButtons = qsa('.sizes button')
+
+sizeButtons.forEach((button) => {
+  button.onclick = () => {
+    const activeElement = qs('button.active')
+    if (activeElement) {
+      activeElement.classList.remove('active')
+    }
+    button.classList.add('active')
+  }
+})
 
 const RATIO = 25
 
@@ -16,7 +30,7 @@ container.addEventListener('mousemove', (e) => {
 })
 
 // Animate In
-container.addEventListener('mouseenter', (e) => {
+container.addEventListener('mouseenter', () => {
   card.style.transition = 'none'
 
   // Popout
@@ -28,27 +42,14 @@ container.addEventListener('mouseenter', (e) => {
 })
 
 // Animate Out
-container.addEventListener('mouseleave', (e) => {
+container.addEventListener('mouseleave', () => {
   card.style.transition = `all 0.5s ease`
   card.style.transform = `rotateX(0deg) rotateY(0deg)`
 
   // Pop back
   title.style.transform = 'translateZ(0)'
-  sneaker.style.transform = 'translateZ(0px) rotateZ(0deg)'
-  description.style.transform = 'translateZ(0px)'
-  sizes.style.transform = 'translateZ(0px)'
-  purchase.style.transform = 'translateZ(0px)'
-})
-
-// Select Size
-const sizeButtons = Array.from(sizes.querySelectorAll('button'))
-
-sizeButtons.forEach((button) => {
-  button.onclick = () => {
-    const activeElement = sizeButtons.find((each) =>
-      each.classList.contains('active')
-    )
-    activeElement.classList.remove('active')
-    button.classList.add('active')
-  }
+  sneaker.style.transform = 'translateZ(0) rotateZ(0)'
+  description.style.transform = 'translateZ(0)'
+  sizes.style.transform = 'translateZ(0)'
+  purchase.style.transform = 'translateZ(0)'
 })
