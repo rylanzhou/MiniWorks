@@ -54,6 +54,7 @@ setInterval(() => {
 button.onclick = () => {
   is24 = !is24
   setClock()
+  button.blur()
 }
 
 document.onkeyup = (e) => {
@@ -66,6 +67,7 @@ document.onkeyup = (e) => {
 select.onchange = (e) => {
   utc = +e.target.value
   setClock()
+  select.blur()
 }
 
 setClock()
