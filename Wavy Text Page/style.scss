@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: menlo;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #000;
+}
+
+.wavy-text {
+  position: relative;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+
+  span {
+    position: relative;
+    display: inline-block;
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: #fff;
+    animation: jump 2s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i));
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-80%);
+  }
+  40% {
+    transform: translateY(0);
+  }
+}
